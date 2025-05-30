@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 
 function Header(props) {
-  // console.log('props',props,props.title);
+  // console.log('props',props,props.title);　中身チェック
   return <header>
         <h1><a href="/" onClick={(event)=>{
           event.preventDefault();
@@ -19,7 +19,7 @@ function Nav(props) {
     lis.push(<li key={t.id}>
       <a id={t.id} href={'/read/'+t.id} onClick={event=>{
         event.preventDefault();
-        props.onChangeMode(Number(event.target.id));
+        props.onChangeMode(Number(event.target.id));//Number形式にする
       }}>{t.title}</a>
       </li>)
     
